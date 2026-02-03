@@ -1,0 +1,26 @@
+{
+  "name": "Python uv",
+  "image": "ghcr.io/astral-sh/uv:bookworm",
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "waitFor": "onCreateCommand",
+  "postCreateCommand": "uv sync --frozen",
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter-renderers",
+        "bierner.markdown-mermaid",
+        "charliermarsh.ruff",
+        "ms-toolsai.datawrangler"
+      ]
+    }
+  }
+}
